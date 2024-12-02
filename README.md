@@ -106,7 +106,7 @@ Enter a Google Drive path and run this cell if you want to store the results ins
 
 # **Model selection** 🧠
 
-As of the first public release, there are 4 pre-trained options to play with:
+As of the first public release, there are 6 pre-trained options to play with:
 
 |  Size  | Parameters | English-only model | Multilingual model | Required VRAM | Relative speed |
 |:------:|:----------:|:------------------:|:------------------:|:-------------:|:--------------:|
@@ -119,7 +119,7 @@ As of the first public release, there are 4 pre-trained options to play with:
 
 ---
 
-```Model = 'large'```
+```Model = 'turbo'```
 
 ---
 **Run this cell again if you change the model.**
@@ -128,7 +128,7 @@ As of the first public release, there are 4 pre-trained options to play with:
     100%|█████████████████████████████████████| 2.87G/2.87G [01:14<00:00, 41.5MiB/s]
 ```
 
-**large model is selected.**
+**turbo model is selected.**
 
 
 
