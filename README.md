@@ -29,8 +29,8 @@ Make sure you've selected `GPU` as hardware accelerator for the Notebook (Runtim
 
 
 ```
-GPU 0: Tesla T4 (UUID: GPU-daf15fd1-9db3-ec31-1c11-f21ac8e89b01)
-Mon Dec  2 10:24:10 2024       
+GPU 0: Tesla T4 (UUID: GPU-0079ab15-5b72-04e1-d928-1f3bf288393d)
+Mon Dec  2 11:17:06 2024       
 +---------------------------------------------------------------------------------------+
 | NVIDIA-SMI 535.104.05             Driver Version: 535.104.05   CUDA Version: 12.2     |
 |-----------------------------------------+----------------------+----------------------+
@@ -39,7 +39,7 @@ Mon Dec  2 10:24:10 2024
 |                                         |                      |               MIG M. |
 |=========================================+======================+======================|
 |   0  Tesla T4                       Off | 00000000:00:04.0 Off |                    0 |
-| N/A   71C    P0              30W /  70W |   5943MiB / 15360MiB |      0%      Default |
+| N/A   40C    P8               9W /  70W |      0MiB / 15360MiB |      0%      Default |
 |                                         |                      |                  N/A |
 +-----------------------------------------+----------------------+----------------------+
                                                                                          
@@ -48,6 +48,7 @@ Mon Dec  2 10:24:10 2024
 |  GPU   GI   CI        PID   Type   Process name                            GPU Memory |
 |        ID   ID                                                             Usage      |
 |=======================================================================================|
+|  No running processes found                                                           |
 +---------------------------------------------------------------------------------------+
 ```
 
@@ -58,36 +59,36 @@ This cell will take a little while to download several libraries, including Whis
 ---
 
 ```
-    Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
     Collecting git+https://github.com/openai/whisper.git
-      Cloning https://github.com/openai/whisper.git to /tmp/pip-req-build-c3voj3wy
-      Running command git clone -q https://github.com/openai/whisper.git /tmp/pip-req-build-c3voj3wy
-    Requirement already satisfied: numpy in /usr/local/lib/python3.7/dist-packages (from whisper==1.0) (1.21.6)
-    Requirement already satisfied: torch in /usr/local/lib/python3.7/dist-packages (from whisper==1.0) (1.12.1+cu113)
-    Requirement already satisfied: tqdm in /usr/local/lib/python3.7/dist-packages (from whisper==1.0) (4.64.1)
-    Requirement already satisfied: more-itertools in /usr/local/lib/python3.7/dist-packages (from whisper==1.0) (8.14.0)
-    Requirement already satisfied: transformers>=4.19.0 in /usr/local/lib/python3.7/dist-packages (from whisper==1.0) (4.22.2)
-    Requirement already satisfied: ffmpeg-python==0.2.0 in /usr/local/lib/python3.7/dist-packages (from whisper==1.0) (0.2.0)
-    Requirement already satisfied: future in /usr/local/lib/python3.7/dist-packages (from ffmpeg-python==0.2.0->whisper==1.0) (0.16.0)
-    Requirement already satisfied: huggingface-hub<1.0,>=0.9.0 in /usr/local/lib/python3.7/dist-packages (from transformers>=4.19.0->whisper==1.0) (0.10.0)
-    Requirement already satisfied: pyyaml>=5.1 in /usr/local/lib/python3.7/dist-packages (from transformers>=4.19.0->whisper==1.0) (6.0)
-    Requirement already satisfied: importlib-metadata in /usr/local/lib/python3.7/dist-packages (from transformers>=4.19.0->whisper==1.0) (4.12.0)
-    Requirement already satisfied: tokenizers!=0.11.3,<0.13,>=0.11.1 in /usr/local/lib/python3.7/dist-packages (from transformers>=4.19.0->whisper==1.0) (0.12.1)
-    Requirement already satisfied: requests in /usr/local/lib/python3.7/dist-packages (from transformers>=4.19.0->whisper==1.0) (2.23.0)
-    Requirement already satisfied: regex!=2019.12.17 in /usr/local/lib/python3.7/dist-packages (from transformers>=4.19.0->whisper==1.0) (2022.6.2)
-    Requirement already satisfied: packaging>=20.0 in /usr/local/lib/python3.7/dist-packages (from transformers>=4.19.0->whisper==1.0) (21.3)
-    Requirement already satisfied: filelock in /usr/local/lib/python3.7/dist-packages (from transformers>=4.19.0->whisper==1.0) (3.8.0)
-    Requirement already satisfied: typing-extensions>=3.7.4.3 in /usr/local/lib/python3.7/dist-packages (from huggingface-hub<1.0,>=0.9.0->transformers>=4.19.0->whisper==1.0) (4.1.1)
-    Requirement already satisfied: pyparsing!=3.0.5,>=2.0.2 in /usr/local/lib/python3.7/dist-packages (from packaging>=20.0->transformers>=4.19.0->whisper==1.0) (3.0.9)
-    Requirement already satisfied: zipp>=0.5 in /usr/local/lib/python3.7/dist-packages (from importlib-metadata->transformers>=4.19.0->whisper==1.0) (3.8.1)
-    Requirement already satisfied: certifi>=2017.4.17 in /usr/local/lib/python3.7/dist-packages (from requests->transformers>=4.19.0->whisper==1.0) (2022.6.15)
-    Requirement already satisfied: idna<3,>=2.5 in /usr/local/lib/python3.7/dist-packages (from requests->transformers>=4.19.0->whisper==1.0) (2.10)
-    Requirement already satisfied: chardet<4,>=3.0.2 in /usr/local/lib/python3.7/dist-packages (from requests->transformers>=4.19.0->whisper==1.0) (3.0.4)
-    Requirement already satisfied: urllib3!=1.25.0,!=1.25.1,<1.26,>=1.21.1 in /usr/local/lib/python3.7/dist-packages (from requests->transformers>=4.19.0->whisper==1.0) (1.24.3)
-    Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
-    Requirement already satisfied: pytube in /usr/local/lib/python3.7/dist-packages (12.1.0)
-
-
+      Cloning https://github.com/openai/whisper.git to /tmp/pip-req-build-h5rg7qi_
+      Running command git clone --filter=blob:none --quiet https://github.com/openai/whisper.git /tmp/pip-req-build-h5rg7qi_
+      Resolved https://github.com/openai/whisper.git to commit 90db0de1896c23cbfaf0c58bc2d30665f709f170
+      Installing build dependencies ... done
+      Getting requirements to build wheel ... done
+      Preparing metadata (pyproject.toml) ... done
+    Requirement already satisfied: numba in /usr/local/lib/python3.10/dist-packages (from openai-whisper==20240930) (0.60.0)
+    Requirement already satisfied: numpy in /usr/local/lib/python3.10/dist-packages (from openai-whisper==20240930) (1.26.4)
+    Requirement already satisfied: torch in /usr/local/lib/python3.10/dist-packages (from openai-whisper==20240930) (2.5.1+cu121)
+    Requirement already satisfied: tqdm in /usr/local/lib/python3.10/dist-packages (from openai-whisper==20240930) (4.66.6)
+    Requirement already satisfied: more-itertools in /usr/local/lib/python3.10/dist-packages (from openai-whisper==20240930) (10.5.0)
+    Requirement already satisfied: tiktoken in /usr/local/lib/python3.10/dist-packages (from openai-whisper==20240930) (0.8.0)
+    Requirement already satisfied: triton>=2.0.0 in /usr/local/lib/python3.10/dist-packages (from openai-whisper==20240930) (3.1.0)
+    Requirement already satisfied: filelock in /usr/local/lib/python3.10/dist-packages (from triton>=2.0.0->openai-whisper==20240930) (3.16.1)
+    Requirement already satisfied: llvmlite<0.44,>=0.43.0dev0 in /usr/local/lib/python3.10/dist-packages (from numba->openai-whisper==20240930) (0.43.0)
+    Requirement already satisfied: regex>=2022.1.18 in /usr/local/lib/python3.10/dist-packages (from tiktoken->openai-whisper==20240930) (2024.9.11)
+    Requirement already satisfied: requests>=2.26.0 in /usr/local/lib/python3.10/dist-packages (from tiktoken->openai-whisper==20240930) (2.32.3)
+    Requirement already satisfied: typing-extensions>=4.8.0 in /usr/local/lib/python3.10/dist-packages (from torch->openai-whisper==20240930) (4.12.2)
+    Requirement already satisfied: networkx in /usr/local/lib/python3.10/dist-packages (from torch->openai-whisper==20240930) (3.4.2)
+    Requirement already satisfied: jinja2 in /usr/local/lib/python3.10/dist-packages (from torch->openai-whisper==20240930) (3.1.4)
+    Requirement already satisfied: fsspec in /usr/local/lib/python3.10/dist-packages (from torch->openai-whisper==20240930) (2024.10.0)
+    Requirement already satisfied: sympy==1.13.1 in /usr/local/lib/python3.10/dist-packages (from torch->openai-whisper==20240930) (1.13.1)
+    Requirement already satisfied: mpmath<1.4,>=1.1.0 in /usr/local/lib/python3.10/dist-packages (from sympy==1.13.1->torch->openai-whisper==20240930) (1.3.0)
+    Requirement already satisfied: charset-normalizer<4,>=2 in /usr/local/lib/python3.10/dist-packages (from requests>=2.26.0->tiktoken->openai-whisper==20240930) (3.4.0)
+    Requirement already satisfied: idna<4,>=2.5 in /usr/local/lib/python3.10/dist-packages (from requests>=2.26.0->tiktoken->openai-whisper==20240930) (3.10)
+    Requirement already satisfied: urllib3<3,>=1.21.1 in /usr/local/lib/python3.10/dist-packages (from requests>=2.26.0->tiktoken->openai-whisper==20240930) (2.2.3)
+    Requirement already satisfied: certifi>=2017.4.17 in /usr/local/lib/python3.10/dist-packages (from requests>=2.26.0->tiktoken->openai-whisper==20240930) (2024.8.30)
+    Requirement already satisfied: MarkupSafe>=2.0 in /usr/local/lib/python3.10/dist-packages (from jinja2->torch->openai-whisper==20240930) (3.0.2)
+    Requirement already satisfied: yt-dlp in /usr/local/lib/python3.10/dist-packages (2024.11.18)
     Using device: cuda:0
 ```
 
@@ -124,7 +125,7 @@ As of the first public release, there are 6 pre-trained options to play with:
 **Run this cell again if you change the model.**
 
 ```
-    100%|█████████████████████████████████████| 2.87G/2.87G [01:14<00:00, 41.5MiB/s]
+    100%|█████████████████████████████████████| 1.51G/1.51G [00:21<00:00, 75.2MiB/s]
 ```
 
 **turbo model is selected.**
