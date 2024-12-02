@@ -106,7 +106,7 @@ Enter a Google Drive path and run this cell if you want to store the results ins
 
 # **Model selection** 🧠
 
-As of the first public release, there are 6 pre-trained options to play with:
+There are 6 pre-trained options to play with:
 
 |  Size  | Parameters | English-only model | Multilingual model | Required VRAM | Relative speed |
 |:------:|:----------:|:------------------:|:------------------:|:-------------:|:--------------:|
@@ -117,6 +117,8 @@ As of the first public release, there are 6 pre-trained options to play with:
 | large  |   1550 M   |        N/A         |      `large`       |    ~10 GB     |       1x       |
 | turbo  |   809 M    |        N/A         |      `turbo`       |     ~6 GB     |      ~8x       |
 
+The discussion about which model is better to choose:
+https://github.com/openai/whisper/discussions/2363
 ---
 
 ```Model = 'turbo'```
